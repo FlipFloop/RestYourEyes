@@ -76,12 +76,12 @@ fn timer_loop() void {
         update_ui();
 
         // Log every 10 seconds to show it's alive
-        if (tick % 10 == 0) {
-            app_state.mutex.lock();
-            const time = app_state.time_remaining;
-            app_state.mutex.unlock();
-            std.debug.print("Timer tick: {d}s remaining\n", .{time});
-        }
+        // if (tick % 10 == 0) {
+        //     app_state.mutex.lock();
+        //     const time = app_state.time_remaining;
+        //     app_state.mutex.unlock();
+        //     std.debug.print("Timer tick: {d}s remaining\n", .{time});
+        // }
         tick += 1;
 
         std.Thread.sleep(1 * std.time.ns_per_s);
@@ -106,6 +106,6 @@ pub fn main() !void {
     thread.detach();
 
     // Run main loop (blocks)
-    std.debug.print("Running app loop... (Check menu bar for 'W' icon)\n", .{});
+    std.debug.print("Running app loop... (Check menu bar for RestYourEyes icon)\n", .{});
     c.run_app();
 }
