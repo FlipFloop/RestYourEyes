@@ -10,6 +10,7 @@ pub fn build(b: *std.Build) void {
             .root_source_file = b.path("src/main.zig"),
             .target = target,
             .optimize = optimize,
+            .strip = optimize == .ReleaseSmall or optimize == .ReleaseFast,
         }),
     });
 
@@ -28,10 +29,10 @@ pub fn build(b: *std.Build) void {
     exe.linkFramework("Cocoa");
 
     // Define App Bundle paths
-    const app_name = "RestYourEyes.app";
-    const contents_path = b.fmt("{s}/Contents", .{app_name});
-    const macos_path = b.fmt("{s}/MacOS", .{contents_path});
-    const resources_path = b.fmt("{s}/Resources", .{contents_path});
+    const app_name: []const u8 = "RestYourEyes.app";
+    const contents_path: []u8 = b.fmt("{s}/Contents", .{app_name});
+    const macos_path: []u8 = b.fmt("{s}/MacOS", .{contents_path});
+    const resources_path: []u8 = b.fmt("{s}/Resources", .{contents_path});
 
     // 1. Install the executable into MacOS folder
     const install_exe = b.addInstallArtifact(exe, .{
