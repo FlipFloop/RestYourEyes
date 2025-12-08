@@ -44,6 +44,10 @@ Its aim is to be minimal. If you wish to see a new feature or optimize the code,
    open zig-out/RestYourEyes.app
    ```
 
+## Contributing
+
+This is the first time I publish an executable that might get downloaded many times. If you see an issue with my config, on GitHub or elsewhere, please let me know.
+
 ## License
 
 This project is **Source Available** and free for personal, non-commercial use.
