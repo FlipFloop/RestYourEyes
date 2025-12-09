@@ -1,6 +1,6 @@
 # RestYourEyes
 
-RestYourEyes is a lightweight (2.3Mb!) macOS menu bar application designed to help you reduce eye strain by reminding you to take regular breaks. It implements the popular 20-20-20 rule and other common timing patterns to keep your eyes healthy during long coding sessions.
+RestYourEyes is a lightweight (2.3Mb!) macOS menu bar application designed to help you reduce eye strain by reminding you to take regular breaks. It implements the popular 20-20-20 rule and other common timing patterns to keep your eyes healthy while working on your computer.
 
 Its aim is to be minimal. If you wish to see a new feature or optimize the code, please submit a PR.
 
@@ -47,6 +47,10 @@ Its aim is to be minimal. If you wish to see a new feature or optimize the code,
 ## Contributing
 
 This is the first time I publish an executable that might get downloaded many times. If you see an issue with my config, on GitHub or elsewhere, please let me know.
+
+### Missing features
+
+- Multiple-display support
 
 ## License
 
